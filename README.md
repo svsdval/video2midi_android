@@ -7,7 +7,7 @@
 Android application to convert YouTube Synthesia-style piano videos to MIDI files.
 
 * Original PC project: [https://github.com/svsdval/video2midi](https://github.com/svsdval/video2midi)
-* Original Android project credit: [https://github.com/svsdval/video2midi_android](https://github.com/svsdval/video2midi_android) by @svsdval
+* Merged with fork Android : [https://github.com/hunterice5/video2midi_android](https://github.com/hunterice5/video2midi_android) by @hunterice5
 
 ---
 
