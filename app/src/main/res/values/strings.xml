@@ -18,13 +18,13 @@
     <string name="key_positions">Key Positions</string>
     <string name="options">Options</string>
     
-    <string name="octave">Octave: 3</string>
-    <string name="tempo">Tempo: 120</string>
-    <string name="sensitivity">Sensitivity: 90</string>
-    <string name="min_duration">Min Duration: 0.10 sec</string>
-    <string name="white_key_width">White Key Width: 25</string>
-    <string name="black_key_position">Black Key Position: 0.40</string>
-    <string name="keys_count">Keys Count: 89</string>
+    <string name="octave">Octave: %d</string>
+    <string name="tempo">Tempo: %d</string>
+    <string name="sensitivity">Sensitivity: %d</string>
+    <string name="min_duration">Min Duration: %.2f sec</string>
+    <string name="white_key_width">White Key Width: %d</string>
+    <string name="black_key_position">Black Key Position: %.2f</string>
+    <string name="keys_count">Keys Count: %d</string>
     
     <string name="notes_overlap">Notes Overlap</string>
     <string name="ignore_min_duration">Ignore Notes with Min Duration</string>
