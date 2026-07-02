@@ -7,12 +7,18 @@ android {
     namespace = "com.video2midi"
     compileSdk = project.findProperty("GLOBAL_SDK_VERSION")?.toString()?.toInt() ?: 35
 
+    applicationVariants.all {
+        outputs.all {
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
+                "video2midi-${versionName}.apk"
+        }
+    }
     defaultConfig {
         applicationId = "com.video2midi"
         minSdk = project.findProperty("GLOBAL_MIN_SDK_VERSION")?.toString()?.toInt() ?: 29
         targetSdk = project.findProperty("GLOBAL_TARGET_SDK_VERSION")?.toString()?.toInt() ?: 34
         versionCode = 2
-        versionName = "1.0.1"
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
