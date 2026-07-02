@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Video2MIDI</string>
+    <string name="app_icon">Иконка приложения</string>
+    <string name="app_description">Конвертация фортепианного видео в MIDI файл</string>
+
+    <!-- Main Activity -->
+    <string name="no_video_selected">Видео не выбрано</string>
+    <string name="select_video">Выбрать видео</string>
+    <string name="preview">Предпросмотр</string>
+    <string name="settings">Настройки</string>
+    <string name="color_map">Карта цветов</string>
+    <string name="start_conversion">Начать конвертацию</string>
+
+    <!-- Settings Activity -->
+    <string name="settings_title">Настройки</string>
+    <string name="midi_settings">Настройки MIDI</string>
+    <string name="key_positions">Позиции клавиш</string>
+    <string name="options">Параметры</string>
+
+    <string name="octave">Октава: %d</string>
+    <string name="tempo">Темп: %d BPM</string>
+    <string name="sensitivity">Чувствительность: %d</string>
+    <string name="min_duration">Мин. длительность: %.2f сек</string>
+    <string name="white_key_width">Ширина белой клавиши: %d</string>
+    <string name="black_key_position">Позиция чёрной клавиши: %.2f</string>
+    <string name="keys_count">Количество клавиш: %d</string>
+
+    <string name="notes_overlap">Перекрытие нот</string>
+    <string name="ignore_min_duration">Игнорировать ноты с мин. длительностью</string>
+    <string name="use_sparks">Использовать обнаружение искр</string>
+    <string name="use_alternate_keys">Использовать альтернативные клавиши</string>
+    <string name="rollcheck">Роллчек (приоритет соседних клавиш)</string>
+    <string name="rollcheck_priority">Приоритет белых клавиш в роллчеке</string>
+    <string name="use_per_color_delta">Использовать индивидуальную чувствительность по цвету</string>
+    <string name="sync_notes_start">Синхронизировать начало нот</string>
+
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="reset">Сбросить настройки</string>
+
+    <!-- Preview Activity -->
+    <string name="frame_info">Кадр: 0 / 0</string>
+    <string name="video_preview">Предпросмотр видео</string>
+    <string name="prev_frame">Назад</string>
+    <string name="next_frame">Вперёд</string>
+    <string name="close">Закрыть</string>
+
+    <!-- Color Map Activity -->
+    <string name="color_map_title">Карта цветов</string>
+    <string name="color_map_description">Настройка цветов для определения клавиш и MIDI каналов</string>
+    <string name="add_color">Добавить цвет</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Отключить</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <!-- Settings Explanations -->
+    <string name="desc_octave">Регулирует смещение октавы выходного MIDI файла (по умолчанию 3).</string>
+    <string name="desc_tempo">Устанавливает стандартную скорость воспроизведения (ударов в минуту) для сгенерированного MIDI.</string>
+    <string name="desc_sensitivity">Чувствительность детектора к изменениям цвета. Высокое значение = более лёгкое обнаружение, но больше шума. Рекомендуется: 80-95.</string>
+    <string name="desc_min_duration">Нотные события короче этого значения будут проигнорированы или приведены к этой длине для устранения мерцания клавиш. Рекомендуется: 0.02с для 60fps.</string>
+    <string name="desc_white_key_width">Настройте ширину в пикселях виртуальных клавиш пианино под размер клавиатуры в вашем видео.</string>
+    <string name="desc_black_key_position">Настройте относительное горизонтальное смещение для виртуальных чёрных клавиш.</string>
+    <string name="desc_keys_count">Укажите общее количество клавиш пианино, видимых на видео (обычно 88 клавиш).</string>
+    <string name="desc_notes_overlap">Позволяет одновременно перекрывать ноты одной высоты. Держите отключённым для более чистого MIDI.</string>
+    <string name="desc_ignore_min_duration">Включите, чтобы полностью пропускать короткие шумовые клики, короче настройки мин. длительности.</string>
+    <string name="desc_use_sparks">Включите, если в вашем видео есть светящиеся искры над клавиатурой, чтобы улучшить точность обнаружения нот.</string>
+    <string name="desc_use_alternate_keys">Экспериментально: используйте альтернативные алгоритмы маппинга клавиш для нестандартных тем Synthesia.</string>
+    <string name="desc_rollcheck">Анализирует соседние клавиши для фильтрации ложных повторных срабатываний при переливании подсветки между клавишами.</string>
+    <string name="desc_rollcheck_priority">Отдавать приоритет изменениям состояния белых клавиш при обработке роллчека.</string>
+    <string name="desc_use_per_color_delta">Использовать индивидуальные переменные чувствительности из карты цветов вместо глобального значения.</string>
+    <string name="desc_sync_notes_start">Автоматически выравнивать начало нот, воспроизводимых близко друг к другу (помогает выровнять нажатия аккордов).</string>
+    <string name="language_select">Язык / Language</string>
+    <string name="desc_language">Выберите язык интерфейса приложения</string>
+    <string name="recomendations">Рекомендации\n• Для наилучших результатов используйте видео с разрешением 1080p и 60fps или 120fps.\n• Видео с 30fps могут привести к слиянию нот (залипанию) из-за низкой частоты кадров.\n• Вы можете скачать видео с 60fps/120fps с помощью YTDLnis: https://github.com/deniscerri/ytdlnis\n\n</string>
+
+    <!-- Convertation speed -->
+    <string name="conv_speed_title">Выбирте скорость конвертации</string>
+    <string name="conv_speed_high">Высокая точность (медленно, обрабатывает 100% кадров)</string>
+    <string name="conv_speed_normal">Обычная скорость (в 2 раза быстрее, обрабатывает каждый второй кадр)</string>
+    <string name="conv_speed_fast">Быстро (в 3 раза быстрее, обрабатывает каждый третий кадр)</string>
+    <string name="conv_speed_superfast">Очень быстро (в 4 раза быстрее, обрабатывает каждый четвертый кадр)</string>
+
+</resources>

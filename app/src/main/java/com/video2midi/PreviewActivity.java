@@ -596,16 +596,16 @@ public class PreviewActivity extends AppCompatActivity {
 
     private void startConversion() {
         String[] options = {
-            "High Precision (Slow, process 100% of frames)",
-            "Normal Speed (2x Faster, process every 2nd frame)",
-            "Fast (3x Faster, process every 3rd frame)",
-            "Super Fast (4x Faster, process every 4th frame)"
+            getString(R.string.conv_speed_high),
+            getString(R.string.conv_speed_normal),
+            getString(R.string.conv_speed_fast),
+            getString(R.string.conv_speed_superfast)
         };
         int defaultChoice = 0; // "High Precision"
         selectedFrameStep = 1; // Reset default choice variable
 
         new AlertDialog.Builder(this)
-            .setTitle("Choose Conversion Speed")
+            .setTitle(getString(R.string.conv_speed_title))
             .setSingleChoiceItems(options, defaultChoice, (dialog, which) -> {
                 selectedFrameStep = which + 1;
             })

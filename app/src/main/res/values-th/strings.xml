@@ -76,4 +76,13 @@
     <string name="desc_sync_notes_start">ปรับเวลาเริ่มต้นของกลุ่มโน้ตที่เริ่มเล่นใกล้เคียงกันให้กดเล่นตรงจังหวะพร้อมกัน (เช่น การกดคอร์ด)</string>
     <string name="language_select">ภาษา / Language</string>
     <string name="desc_language">เลือกภาษาอินเตอร์เฟสของแอปพลิเคชัน (Select application interface language)</string>
+    <string name="recomendations">คำแนะนำ:\n• เพื่อผลลัพธ์ที่ดีที่สุด ควรใช้วิดีโอ 1080p 60fps หรือ 120fps\n• วิดีโอ 30fps อาจทำให้โน้ตเล่นติดกัน (โน้ตควบ) เนื่องจากเฟรมเรตต่ำเกินไป\n• แนะนำให้ดาวน์โหลดวิดีโอ 60fps/120fps ผ่านแอป YTDLnis: https://github.com/deniscerri/ytdlnis</string>
+
+    <!-- Convertation speed -->
+    <string name="conv_speed_title">เลือกความเร็วในการแปลง</string>
+    <string name="conv_speed_high">ความแม่นยำสูง (ช้าลง, ประมวลผลเฟรม 100%)</string>
+    <string name="conv_speed_normal">ความเร็วปกติ (เร็วขึ้น 2 เท่า, ประมวลผลทุกเฟรมที่สอง)</string>
+    <string name="conv_speed_fast">รวดเร็ว (เร็วขึ้น 3 เท่า, ประมวลผลทุกเฟรมที่สาม)</string>
+    <string name="conv_speed_superfast">เร็วมาก (เร็วขึ้น 4 เท่า, ประมวลผลทุกเฟรมที่สี่)</string>
+
 </resources>

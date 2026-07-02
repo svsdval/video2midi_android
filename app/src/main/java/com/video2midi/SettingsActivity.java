@@ -123,39 +123,37 @@ public class SettingsActivity extends AppCompatActivity {
         // Octave (0-7)
         seekOctave.setMax(7);
         seekOctave.setProgress(preferences.getOctave());
-        tvOctave.setText("Octave: " + preferences.getOctave());
-        
+        tvOctave.setText( getString(R.string.octave,  preferences.getOctave()) );
+
         // Tempo (30-240)
         seekTempo.setMax(210);
         seekTempo.setProgress(preferences.getTempo() - 30);
-        tvTempo.setText("Tempo: " + preferences.getTempo());
-        
+        tvTempo.setText( getString (R.string.tempo, preferences.getTempo()));
+
         // Sensitivity (0-130)
         seekSensitivity.setMax(130);
         seekSensitivity.setProgress(preferences.getSensitivity());
-        tvSensitivity.setText("Sensitivity: " + preferences.getSensitivity());
-        
+        tvSensitivity.setText( getString(R.string.sensitivity, preferences.getSensitivity()));
+
         // Min Duration (0-2.0 sec)
         seekMinDuration.setMax(200);
         seekMinDuration.setProgress((int)(preferences.getMinimalDuration() * 100));
-        tvMinDuration.setText(String.format("Min Duration: %.2f sec", 
-            preferences.getMinimalDuration()));
-        
+        tvMinDuration.setText( getString(R.string.min_duration, preferences.getMinimalDuration()));
+
         // White Key Width (10-40)
         seekWhiteKeyWidth.setMax(400);
         seekWhiteKeyWidth.setProgress(preferences.getWhiteKeyWidth() - 10);
-        tvWhiteKeyWidth.setText("White Key Width: " + preferences.getWhiteKeyWidth());
-        
+        tvWhiteKeyWidth.setText( getString(R.string.white_key_width , preferences.getWhiteKeyWidth()));
+
         // Black Key Position (0-1.0)
         seekBlackKeyPos.setMax(100);
         seekBlackKeyPos.setProgress((int)(preferences.getBlackKeyRelativePosition() * 100));
-        tvBlackKeyPos.setText(String.format("Black Key Pos: %.2f", 
-            preferences.getBlackKeyRelativePosition()));
-        
+        tvBlackKeyPos.setText( getString(R.string.black_key_position, preferences.getBlackKeyRelativePosition()));
+
         // Keys Count (12-144)
         seekKeysCount.setMax(132);
         seekKeysCount.setProgress(preferences.getKeysPosCount() - 12);
-        tvKeysCount.setText("Keys Count: " + preferences.getKeysPosCount());
+        tvKeysCount.setText( getString(R.string.keys_count, preferences.getKeysPosCount()) );
         
         // Checkboxes
         cbNotesOverlap.setChecked(preferences.isNotesOverlap());
@@ -167,7 +165,7 @@ public class SettingsActivity extends AppCompatActivity {
         cbUsePerColorDelta.setChecked(preferences.isUsePerColorDelta());
         cbSyncNotesStart.setChecked(preferences.isSyncNotesStartPos());
 
-        String[] languages = {"English", "ไทย"};
+        String[] languages = {"English", "ไทย", "Русский"};
         android.widget.ArrayAdapter<String> adapter = new android.widget.ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, languages);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -175,9 +173,13 @@ public class SettingsActivity extends AppCompatActivity {
 
         if ("th".equals(preferences.getLanguage())) {
             spinnerLanguage.setSelection(1);
+        } else if ("ru".equals(preferences.getLanguage())) {
+            spinnerLanguage.setSelection(2);
         } else {
             spinnerLanguage.setSelection(0);
         }
+
+
     }
     
     private void setupListeners() {
@@ -185,7 +187,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekOctave.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvOctave.setText("Octave: " + progress);
+                tvOctave.setText( getString(R.string.octave,  progress) );
             }
             
             @Override
@@ -199,7 +201,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekTempo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvTempo.setText("Tempo: " + (progress + 30));
+                tvTempo.setText(getString (R.string.tempo, progress + 30));
             }
             
             @Override
@@ -213,7 +215,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekSensitivity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvSensitivity.setText("Sensitivity: " + progress);
+                tvSensitivity.setText( getString(R.string.sensitivity, progress));
             }
             
             @Override
@@ -228,7 +230,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 float value = progress / 100.0f;
-                tvMinDuration.setText(String.format("Min Duration: %.2f sec", value));
+                tvMinDuration.setText(getString(R.string.min_duration,value));
             }
             
             @Override
@@ -242,7 +244,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekWhiteKeyWidth.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvWhiteKeyWidth.setText("White Key Width: " + (progress + 10));
+                tvWhiteKeyWidth.setText(getString(R.string.white_key_width , (progress + 10)));
             }
             
             @Override
@@ -257,7 +259,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 float value = progress / 100.0f;
-                tvBlackKeyPos.setText(String.format("Black Key Pos: %.2f", value));
+                tvBlackKeyPos.setText(getString(R.string.black_key_position,value));
             }
             
             @Override
@@ -271,7 +273,7 @@ public class SettingsActivity extends AppCompatActivity {
         seekKeysCount.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvKeysCount.setText("Keys Count: " + (progress + 12));
+                tvKeysCount.setText(getString(R.string.keys_count, (progress + 12)) );
             }
             
             @Override
@@ -325,7 +327,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         int langSelection = spinnerLanguage.getSelectedItemPosition();
         String oldLang = preferences.getLanguage();
-        String newLang = langSelection == 1 ? "th" : "en";
+        String newLang;
+        if (langSelection == 1) {
+            newLang = "th";
+        } else if (langSelection == 2) {
+            newLang = "ru";
+        } else {
+            newLang = "en";
+        }
         preferences.setLanguage(newLang);
         
         // Обновляем позиции клавиш

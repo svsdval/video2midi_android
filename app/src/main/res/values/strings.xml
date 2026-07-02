@@ -76,4 +76,14 @@
     <string name="desc_sync_notes_start">Auto-align starting times of notes played very close to each other (helps align chord keystrokes).</string>
     <string name="language_select">Language / ภาษา</string>
     <string name="desc_language">Select application interface language (เลือกภาษาแสดงผลของแอป)</string>
+    <string name="recomendations">Recommendation\n• For best results, use 1080p 60fps or 120fps videos.\n• 30fps videos may cause notes to merge (stick together) due to low frame rate.\n• You can download 60fps/120fps videos using YTDLnis: https://github.com/deniscerri/ytdlnis\n\n</string>
+
+    <!-- Convertation speed -->
+    <string name="conv_speed_title">Choose Conversion Speed</string>
+    <string name="conv_speed_high">High Precision (Slow, process 100% of frames)</string>
+    <string name="conv_speed_normal">Normal Speed (2x Faster, process every 2nd frame)</string>
+    <string name="conv_speed_fast">Fast (3x Faster, process every 3rd frame)</string>
+    <string name="conv_speed_superfast">Super Fast (4x Faster, process every 4th frame)</string>
+
+    
 </resources>
